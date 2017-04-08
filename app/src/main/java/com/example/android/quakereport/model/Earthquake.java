@@ -12,14 +12,21 @@ public class Earthquake {
     private Double mag;
     private String place;
     private Date time;
+    private String url;
+
     private static final String DATE_FORMAT = "MMM dd, yyyy";
     private static final String TIME_FORMAT = "h:mm a";
     private static final String DOUBLE_FORMAT = "0.0";
 
-    public Earthquake(Double mag, String place, Date time) {
+    public Earthquake(Double mag, String place, Date time, String url) {
         this.mag = mag;
         this.place = place;
         this.time = time;
+        this.url  = url;
+    }
+
+    public String getUrl() {
+        return url;
     }
 
     public Double getMag() {
